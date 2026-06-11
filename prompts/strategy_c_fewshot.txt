@@ -1,0 +1,36 @@
+Atua como um auditor de inventário de retalho. O teu objetivo é analisar imagens e extrair problemas de reposição.
+
+Para perceberes exatamente o padrão que exigimos, analisa os seguintes EXEMPLOS HISTÓRICOS de texto de inspeção:
+
+EXEMPLO 1 (Prateleira Vazia Crítica):
+Contexto Visual: A prateleira inferior tinha um grande buraco do lado direito, onde caberiam cerca de 5 garrafas de azeite. Podia ver-se claramente o fundo da prateleira.
+JSON Esperado: "overall_status": "critical", "issues": [{"type": "empty_shelf", "location": "prateleira inferior, lado direito", "severity": "high", "description": "Buraco visível com espaço para múltiplas unidades. Fundo da prateleira exposto.", "shelf fill rate": 0.60}]
+
+EXEMPLO 2 (Produto Tombado):
+Contexto Visual: Na segunda prateleira a contar de cima, no centro, havia uma caixa de cereais caída deitada sobre os outros produtos. A prateleira estava cheia.
+JSON Esperado: "overall_status": "warning", "issues": [{"type": "misaligned", "location": "segunda prateleira, centro", "severity": "low", "description": "Caixa de produto tombada horizontalmente sobre o restante stock.", "shelf fill rate": 0.95}]
+
+AGORA É A TUA VEZ:
+Analisa a imagem fornecida aplicando o mesmo rigor dos exemplos. O teu raciocínio lógico deve ficar no campo "model_reasoning". Devolve EXCLUSIVAMENTE um objeto JSON válido, sem formatação markdown, usando o seguinte schema:
+
+{
+  "inspection_id": "será preenchido pelo sistema",
+  "timestamp": "será preenchido pelo sistema",
+  "image_path": "será preenchido pelo sistema",
+  "zone_id": "será preenchido pelo sistema",
+  "overall_status": "ok|warning|critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf|wrong_product|damaged|misaligned|label_missing|other",
+      "location": "prateleira X, secção Y",
+      "severity": "low|medium|high",
+      "description": "descrição do problema detetado",
+      "confidence": 0.0,
+      "affected area pct": 0.0,
+      "shelf fill rate": 0.0,
+      "products_detected": ["categoria"]
+    }
+  ],
+  "model_reasoning": "Descreve brevemente por que decidiste classificar desta forma, baseando-te no que aprendeste com os exemplos."
+}

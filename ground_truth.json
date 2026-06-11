@@ -1,0 +1,77 @@
+{
+  "exemplo1(n).jpg": [],
+  "exemplo2(n).jpg": [],
+  "exemplo3(a).jpg": [
+    {
+      "type": "other",
+      "severity": "medium"
+    }
+  ],
+  "exemplo4(a).jpg": [
+    {
+      "type": "other",
+      "severity": "medium"
+    }
+  ],
+  "exemplo5(s).jpg": [
+    {
+      "type": "damaged",
+      "severity": "medium"
+    }
+  ],
+  "exemplo6(s).jpg": [
+    {
+      "type": "misaligned",
+      "severity": "medium"
+    }
+  ],
+  "exemplo7(v).jpg": [
+    {
+      "type": "empty_shelf",
+      "severity": "high"
+    }
+  ],
+  "exemplo8(v).jpg": [
+    {
+      "type": "empty_shelf",
+      "severity": "medium"
+    }
+  ],
+  "exemplo9(vio).jpg": [
+    {
+      "type": "misaligned",
+      "severity": "high"
+    }
+  ],
+  "exemplo10(vio).jpg": [
+    {
+      "type": "misaligned",
+      "severity": "high"
+    }
+  ],
+  "exemplo11(a).jpg": [
+    {
+      "type": "other",
+      "severity": "medium"
+    }
+  ],
+  "exemplo12(n).jpg": [],
+  "exemplo13(s).jpg": [
+    {
+      "type": "misaligned",
+      "severity": "high"
+    }
+  ],
+  "exemplo14(v).jpg": [
+    {
+      "type": "empty_shelf",
+      "severity": "high"
+    }
+  ],
+  "exemplo15(vio).jpg": [
+    {
+      "type": "misaligned",
+      "severity": "medium"
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+    "strategy_used": "strategy_c_fewshot",
+    "total_images_processed": 15,
+    "json_parse_rate_pct": 100.0,
+    "hallucination_rate_pct": 6.666666666666667,
+    "issue_detection_rate_pct": 25.0,
+    "false_positive_rate_pct": 80.0,
+    "severity_accuracy_pct": 33.33,
+    "raw_results": [
+        {
+            "image": "exemplo1(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040258",
+                "timestamp": "2026-06-11T04:02:58Z",
+                "image_path": "data\\images\\test_images\\exemplo1(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A imagem mostra duas prateleiras de garrafas de Sprite. Ambas as prateleiras estão completamente cheias e os produtos estão bem alinhados e organizados. Não há buracos visíveis, produtos tombados, danificados ou desalinhados. O stock parece estar em perfeitas condições de reposição, justificando o status 'ok'."
+            }
+        },
+        {
+            "image": "exemplo10(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040258",
+                "timestamp": "2026-06-11T04:02:58Z",
+                "image_path": "data\\images\\test_images\\exemplo10(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira inferior, lado esquerdo",
+                        "severity": "medium",
+                        "description": "Espaço visível para várias unidades de garrafas de leite na prateleira inferior, indicando necessidade de reposição.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.25,
+                        "shelf fill rate": 0.65,
+                        "products_detected": [
+                            "leite",
+                            "bebidas lácteas"
+                        ]
+                    }
+                ],
+                "model_reasoning": "As prateleiras superiores e médias estão bem abastecidas. No entanto, a prateleira inferior, no lado esquerdo, apresenta um buraco visível com espaço para múltiplas garrafas de leite, o que classifica como um problema de 'empty_shelf' de severidade média. Não é crítico, pois não é uma secção inteiramente vazia, mas é um problema de reposição claro, levando a um 'overall_status' de 'warning'."
+            }
+        },
+        {
+            "image": "exemplo11(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040308",
+                "timestamp": "2026-06-11T04:03:08Z",
+                "image_path": "data\\images\\test_images\\exemplo11(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Apesar da imagem apresentar ruído e blocos pretos que obscurecem algumas áreas, não foram detetados problemas de reposição claros como prateleiras vazias significativas ou produtos tombados/desalinhados. A prateleira parece estar razoavelmente abastecida."
+            }
+        },
+        {
+            "image": "exemplo12(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040308",
+                "timestamp": "2026-06-11T04:03:08Z",
+                "image_path": "data\\images\\test_images\\exemplo12(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A prateleira está completamente cheia e bem organizada com vários tipos de sumos. Não há espaços vazios visíveis, produtos danificados ou desalinhados. Todos os produtos estão em pé e bem apresentados, indicando um estado de stock e arrumação ideal, classificando-o como 'ok' de acordo com os exemplos fornecidos."
+            }
+        },
+        {
+            "image": "exemplo13(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040308",
+                "timestamp": "2026-06-11T04:03:08Z",
+                "image_path": "data\\images\\test_images\\exemplo13(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira superior, secção esquerda",
+                        "severity": "low",
+                        "description": "Pequeno espaço vazio onde caberia 1-2 garrafas de spray Febreze Textile.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.9,
+                        "products_detected": [
+                            "produtos de limpeza"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira superior, secção central (entre sprays Denkmit)",
+                        "severity": "low",
+                        "description": "Pequeno espaço vazio onde caberia 1 garrafa de spray Denkmit.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.03,
+                        "shelf fill rate": 0.9,
+                        "products_detected": [
+                            "produtos de limpeza"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira superior, secção central (abaixo dos Denkmit tubs)",
+                        "severity": "medium",
+                        "description": "Espaço vazio considerável onde caberiam 2-3 Denkmit tubs. Fundo da prateleira parcialmente visível.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.7,
+                        "products_detected": [
+                            "produtos de limpeza"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira superior, secção direita (para Denkmit tubs)",
+                        "severity": "high",
+                        "description": "Grande espaço vazio onde caberiam 4-5 Denkmit tubs. Fundo da prateleira exposto.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.15,
+                        "shelf fill rate": 0.5,
+                        "products_detected": [
+                            "produtos de limpeza"
+                        ]
+                    }
+                ],
+                "model_reasoning": "A imagem apresenta múltiplos pontos com prateleiras vazias de diferentes tamanhos. Embora nenhuma secção individual seja completamente vazia, a acumulação de espaços vazios, incluindo um buraco significativo na secção direita para os Denkmit tubs, justifica um 'warning' no estado geral. A taxa de preenchimento da prateleira está visivelmente reduzida em várias áreas, indicando a necessidade de reposição."
+            }
+        },
+        {
+            "image": "exemplo14(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040314",
+                "timestamp": "2026-06-11T04:03:14Z",
+                "image_path": "data\\images\\test_images\\exemplo14(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "terceira prateleira, secção de boiões Heinz",
+                        "severity": "low",
+                        "description": "Espaço vazio visível para 1-2 boiões de comida para bebé Heinz.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "comida para bebé em boião"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "terceira prateleira, extremo direito",
+                        "severity": "medium",
+                        "description": "Espaço vazio considerável para 3-4 boiões de comida para bebé.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.2,
+                        "shelf fill rate": 0.7,
+                        "products_detected": [
+                            "comida para bebé em boião"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "quarta prateleira, extremo direito",
+                        "severity": "medium",
+                        "description": "Espaço vazio para 2-3 refeições prontas para crianças.",
+                        "confidence": 0.85,
+                        "affected area pct": 0.15,
+                        "shelf fill rate": 0.75,
+                        "products_detected": [
+                            "refeições prontas para crianças"
+                        ]
+                    }
+                ],
+                "model_reasoning": "A prateleira apresenta várias secções com espaços vazios notáveis, especialmente na terceira e quarta prateleiras, onde faltam boiões de comida para bebé e refeições prontas. Embora nenhuma prateleira esteja completamente vazia, as lacunas são suficientes para justificar um estado de 'warning' para indicar a necessidade de reposição, seguindo o padrão de identificar problemas de reposição com severidade adequada."
+            }
+        },
+        {
+            "image": "exemplo15(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_040324",
+                "timestamp": "2026-06-11T04:03:24Z",
+                "image_path": "data\\images\\test_images\\exemplo15(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "segunda prateleira a contar de cima, secção esquerda",
+                        "severity": "medium",
+                        "description": "Buraco visível no centro da secção, indicando stock baixo ou necessidade de reposição/fronting. A prateleira não está completamente vazia, mas a apresentação está comprometida.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.35,
+                        "shelf fill rate": 0.6,
+                        "products_detected": [
+                            "ABC"
+                        ]
+                    }
+                ],
+                "model_reasoning": "A imagem mostra prateleiras geralmente bem abastecidas. No entanto, na segunda prateleira a contar de cima, na secção mais à esquerda, há um buraco visível no meio do stock de produtos 'ABC', indicando stock baixo ou uma falha na reposição/fronting. Embora não seja uma prateleira completamente vazia com o fundo exposto (o que seria 'critical'), a lacuna é significativa o suficiente para justificar um 'warning' e uma severidade 'medium'."
+            }
+        },
+        {
+            "image": "exemplo2(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040334",
+                "timestamp": "2026-06-11T04:03:34Z",
+                "image_path": "data\\images\\test_images\\exemplo2(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A imagem mostra três prateleiras completamente preenchidas com produtos Coca-Cola, sem quaisquer buracos visíveis, produtos desalinhados ou outros problemas de reposição. Todas as prateleiras estão bem organizadas e com stock completo."
+            }
+        },
+        {
+            "image": "exemplo3(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040334",
+                "timestamp": "2026-06-11T04:03:34Z",
+                "image_path": "data\\images\\test_images\\exemplo3(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A análise da imagem não revelou problemas de reposição significativos, como prateleiras vazias ou produtos desalinhados. Todas as prateleiras parecem estar bem abastecidas, sem buracos visíveis ou desorganização que justifique um alerta."
+            }
+        },
+        {
+            "image": "exemplo4(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040334",
+                "timestamp": "2026-06-11T04:03:34Z",
+                "image_path": "data\\images\\test_images\\exemplo4(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A imagem mostra prateleiras bem abastecidas com produtos. Não foram detetados buracos significativos nas prateleiras, produtos tombados, danificados ou desalinhados, nem prateleiras vazias que justificassem um estado de 'warning' ou 'critical', conforme os exemplos fornecidos. O preenchimento das prateleiras é elevado e a organização geral parece adequada."
+            }
+        },
+        {
+            "image": "exemplo5(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040334",
+                "timestamp": "2026-06-11T04:03:34Z",
+                "image_path": "data\\images\\test_images\\exemplo5(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A prateleira está bem abastecida com o produto 'fermipan'. Não foram detetados buracos, produtos tombados, danificados ou desalinhados, nem falta de etiquetas. O stock parece estar em ordem e completo, semelhante a um cenário sem problemas nos exemplos fornecidos."
+            }
+        },
+        {
+            "image": "exemplo6(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040334",
+                "timestamp": "2026-06-11T04:03:34Z",
+                "image_path": "data\\images\\test_images\\exemplo6(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "A imagem não apresenta problemas de reposição significativos. Não há prateleiras vazias críticas com o fundo exposto, nem produtos tombados ou desalinhados de forma notável, como nos exemplos fornecidos. Todas as prateleiras estão bem preenchidas e organizadas, indicando um bom estado de inventário."
+            }
+        },
+        {
+            "image": "exemplo7(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040334",
+                "timestamp": "2026-06-11T04:03:34Z",
+                "image_path": "data\\images\\test_images\\exemplo7(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "segunda prateleira, lado esquerdo",
+                        "severity": "high",
+                        "description": "Secção da prateleira vazia com sinal 'Temporarily out of stock'. Espaço para múltiplas unidades de toalhitas de limpeza.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.5,
+                        "shelf fill rate": 0.25,
+                        "products_detected": [
+                            "toalhitas de limpeza"
+                        ]
+                    }
+                ],
+                "model_reasoning": "A principal razão para a classificação 'critical' é a presença de um sinal 'Temporarily out of stock' numa secção da segunda prateleira, indicando uma falha significativa na reposição de stock para toalhitas de limpeza, com um grande espaço vazio visível."
+            }
+        },
+        {
+            "image": "exemplo8(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040338",
+                "timestamp": "2026-06-11T04:03:38Z",
+                "image_path": "data\\images\\test_images\\exemplo8(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "terceira prateleira, centro",
+                        "severity": "low",
+                        "description": "Algumas garrafas de St. Ives estão ligeiramente inclinadas ou desalinhadas na prateleira.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "St. Ives"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "misaligned",
+                        "location": "quarta prateleira, lado esquerdo",
+                        "severity": "low",
+                        "description": "Algumas garrafas de Softsoap estão ligeiramente inclinadas, não estando perfeitamente alinhadas.",
+                        "confidence": 0.85,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "Softsoap"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "misaligned",
+                        "location": "sétima prateleira, lado esquerdo",
+                        "severity": "low",
+                        "description": "Algumas caixas de sabonete Lever estão ligeiramente desalinhadas e não estão perfeitamente encostadas à frente da prateleira.",
+                        "confidence": 0.88,
+                        "affected area pct": 0.07,
+                        "shelf fill rate": 0.97,
+                        "products_detected": [
+                            "Lever"
+                        ]
+                    }
+                ],
+                "model_reasoning": "A análise da imagem revela que as prateleiras estão bem abastecidas, sem buracos significativos ou produtos em falta. O 'overall_status' foi classificado como 'ok' porque não foram detetados problemas críticos de reposição. As 'issues' identificadas são de desalinhamento menor de alguns produtos, o que é comum em ambientes de retalho e classificado como 'low' severity, não afetando a disponibilidade geral do stock."
+            }
+        },
+        {
+            "image": "exemplo9(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_040346",
+                "timestamp": "2026-06-11T04:03:46Z",
+                "image_path": "data\\images\\test_images\\exemplo9(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira do meio, lado direito",
+                        "severity": "medium",
+                        "description": "Espaço vazio visível onde faltam várias garrafas de iogurte (aproximadamente 3-4 unidades), especialmente na secção com desconto.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.07,
+                        "shelf fill rate": 0.9,
+                        "products_detected": [
+                            "iogurte"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "misaligned",
+                        "location": "prateleira inferior, centro e lado direito",
+                        "severity": "low",
+                        "description": "Várias garrafas pequenas de iogurte estão tombadas horizontalmente em vez de estarem na vertical, afetando a apresentação.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.95,
+                        "products_detected": [
+                            "iogurte"
+                        ]
+                    }
+                ],
+                "model_reasoning": "A prateleira do meio apresenta um buraco notável no lado direito, indicando falta de stock. Adicionalmente, na prateleira inferior, várias garrafas estão tombadas, comprometendo a organização e a apresentação do produto. Estes problemas justificam um estado de 'warning'."
+            }
+        }
+    ]
+}

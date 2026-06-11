@@ -1,0 +1,1024 @@
+{
+    "strategy_used": "strategy_a_zeroshot",
+    "total_images_processed": 15,
+    "json_parse_rate_pct": 93.33333333333333,
+    "hallucination_rate_pct": 42.857142857142854,
+    "issue_detection_rate_pct": 36.36,
+    "false_positive_rate_pct": 93.33,
+    "severity_accuracy_pct": 50.0,
+    "raw_results": [
+        {
+            "image": "exemplo1(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_025111",
+                "timestamp": "2026-06-11T02:51:11Z",
+                "image_path": "data\\images\\test_images\\exemplo1(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Ao analisar a imagem como um auditor de inventário extremamente minucioso e pessimista, concentrei-me nas prateleiras visíveis com garrafas de Sprite. Na primeira prateleira (superior, parcialmente visível), os produtos parecem estar bem dispostos e sem falhas visíveis. Na segunda prateleira (a contar de cima), dividida em secções: Lado Esquerdo: As garrafas de Sprite estão presentes em todas as calhas. No entanto, a primeira garrafa à esquerda parece estar ligeiramente mais recuada em comparação com as suas vizinhas, indicando um pequeno desalinhamento. Centro: As garrafas estão bem preenchidas e alinhadas. Lado Direito: As garrafas estão bem preenchidas e alinhadas. Não foram encontrados 'buracos claros' entre os produtos nesta secção, contrariando a expectativa de falhas específicas. Na terceira prateleira (a contar de cima), dividida em secções: Lado Esquerdo: As garrafas de Sprite estão presentes em todas as calhas e bem alinhadas. Não foram encontrados 'buracos claros' entre os produtos nesta secção, contrariando a expectativa de falhas específicas. Centro: As garrafas estão bem preenchidas e alinhadas. Lado Direito: As garrafas estão bem preenchidas e alinhadas. Não foram detetadas calhas vazias onde o fundo cinzento da prateleira fosse visível, o que indicaria uma rutura de stock crítica. A menção a 'produtos da Air Wick' e 'buracos claros' não se aplica à imagem, que exibe exclusivamente garrafas de Sprite bem preenchidas.",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "prateleira 2, secção esquerda",
+                        "severity": "low",
+                        "description": "A primeira garrafa de Sprite no lado esquerdo da segunda prateleira está ligeiramente mais recuada em relação às garrafas adjacentes, indicando um pequeno desalinhamento na profundidade.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.01,
+                        "shelf fill rate": 1.0,
+                        "products_detected": [
+                            "Sprite"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo10(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025134",
+                "timestamp": "2026-06-11T02:51:34Z",
+                "image_path": "data\\images\\test_images\\exemplo10(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Na primeira prateleira, todas as secções (esquerda, centro, direita) estão completamente preenchidas. Na segunda prateleira, as secções esquerda e centro estão cheias, mas na secção direita, há uma calha aramada vazia claramente visível entre os produtos 'moloko' de embalagem castanha e os produtos 'ne moloko' de embalagem amarela, indicando uma rutura de stock. Na terceira prateleira, as secções esquerda e direita estão cheias, e na secção central, há um pequeno espaço entre os produtos 'Moloko' de embalagem azul/branca e os produtos 'Parmalat'. Na quarta prateleira, todas as secções (esquerda, centro, direita) estão completamente preenchidas.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Rutura de stock visível numa calha aramada vazia entre os produtos 'moloko' de embalagem castanha e os produtos 'ne moloko' de embalagem amarela. O fundo cinzento da prateleira é claramente visível.",
+                        "confidence": 0.98,
+                        "affected area pct": 15.0,
+                        "shelf fill rate": 85.0,
+                        "products_detected": [
+                            "bebida vegetal",
+                            "leite"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo11(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_025207",
+                "timestamp": "2026-06-11T02:52:07Z",
+                "image_path": "data\\images\\test_images\\exemplo11(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Análise detalhada por prateleira e secção:\n- Prateleira 1 (topo): Na secção esquerda, produtos presentes. Na secção central, produtos presentes, sem falhas visíveis. Na secção direita, produtos presentes, sem falhas visíveis.\n- Prateleira 2 (segunda a contar de cima): Na secção esquerda, produtos presentes. Na secção central, foram identificados buracos claros entre os produtos (referidos como 'produtos da Air Wick' conforme o protocolo), onde o fundo cinzento da prateleira é visível, indicando uma rutura de stock. Na secção direita, também foram identificados buracos claros entre os produtos (referidos como 'produtos da Air Wick'), com o fundo cinzento da prateleira exposto, o que constitui uma rutura de stock.\n- Prateleira 3 (terceira a contar de cima): Na secção esquerda, foram identificados buracos claros entre os produtos (referidos como 'produtos da Air Wick'), onde o fundo cinzento da prateleira é visível, indicando uma rutura de stock. Na secção central, produtos presentes, mas com um espaço vazio notável. Na secção direita, produtos presentes, sem falhas visíveis.\n\nCom base nas múltiplas ruturas de stock identificadas nas prateleiras 2 e 3, o status global é crítico.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Buraco claro entre os produtos (referidos como 'produtos da Air Wick' conforme o protocolo), com o fundo cinzento da prateleira visível, indicando rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.08,
+                        "shelf fill rate": 0.92,
+                        "products_detected": [
+                            "produtos da Air Wick"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Buraco claro entre os produtos (referidos como 'produtos da Air Wick' conforme o protocolo), com o fundo cinzento da prateleira visível, indicando rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.9,
+                        "products_detected": [
+                            "produtos da Air Wick"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção esquerda",
+                        "severity": "high",
+                        "description": "Buraco claro entre os produtos (referidos como 'produtos da Air Wick' conforme o protocolo), com o fundo cinzento da prateleira visível, indicando rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.07,
+                        "shelf fill rate": 0.93,
+                        "products_detected": [
+                            "produtos da Air Wick"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro",
+                        "severity": "high",
+                        "description": "Espaço vazio notável entre os produtos, com o fundo da prateleira visível, indicando uma falha no preenchimento.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.95,
+                        "products_detected": [
+                            "produtos da Air Wick"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo12(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025230",
+                "timestamp": "2026-06-11T02:52:30Z",
+                "image_path": "data\\images\\test_images\\exemplo12(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Ao analisar a prateleira por secções, não foram detetadas rupturas de stock óbvias ou 'buracos claros' entre os produtos, onde o fundo cinzento da prateleira fosse visível. Todos os espaços designados para produtos estão preenchidos. No entanto, na secção esquerda, duas caixas de sumo Cappy apresentam um ligeiro desalinhamento/angulação em relação às restantes. As secções central e direita estão impecavelmente alinhadas e sem espaços vazios.",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "prateleira 1, secção esquerda",
+                        "severity": "low",
+                        "description": "Duas caixas de sumo Cappy (embalagem verde/amarela/vermelha) no lado esquerdo da prateleira estão ligeiramente desalinhadas/anguladas.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 1.0,
+                        "products_detected": [
+                            "Cappy"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo13(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_025300",
+                "timestamp": "2026-06-11T02:53:00Z",
+                "image_path": "data\\images\\test_images\\exemplo13(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Prateleira 1 (Topo): A secção esquerda, centro e direita parecem estar completamente preenchidas com produtos Febreze Air, Febreze Textile e Denkmit, respetivamente, sem falhas visíveis. Prateleira 2 (Segunda a contar de cima): Na secção Centro, existem dois buracos claros entre os produtos Febreze Textile. Na secção Direita, foram detetadas duas calhas aramadas vazias entre os produtos Denkmit em spray, onde o fundo cinzento da prateleira é visível, o que constitui uma rutura de stock óbvia. Prateleira 3 (Terceira a contar de cima): Na secção Esquerda, foram detetadas duas calhas aramadas vazias entre os produtos Febreze Textile em spray, com o fundo cinzento da prateleira visível, indicando rutura de stock. Na secção Centro, foram detetadas duas calhas aramadas vazias entre os produtos Denkmit em spray, com o fundo cinzento da prateleira visível, indicando rutura de stock. Prateleira 4 (Fundo): A secção esquerda, centro e direita parecem estar completamente preenchidas com produtos Denkmit em balde e Denkmit em spray, sem falhas visíveis.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção Centro",
+                        "severity": "high",
+                        "description": "Buraco claro entre o segundo e o terceiro produto Febreze Textile, indicando falta de stock.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção Centro",
+                        "severity": "high",
+                        "description": "Buraco claro entre o terceiro e o quarto produto Febreze Textile, indicando falta de stock.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção Direita",
+                        "severity": "high",
+                        "description": "Calha aramada vazia visível entre os produtos Denkmit em spray, indicando uma rutura de stock óbvia.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção Direita",
+                        "severity": "high",
+                        "description": "Calha aramada vazia visível entre os produtos Denkmit em spray, indicando uma rutura de stock óbvia.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_005",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção Esquerda",
+                        "severity": "high",
+                        "description": "Calha aramada vazia visível entre os produtos Febreze Textile em spray, indicando uma rutura de stock óbvia.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_006",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção Esquerda",
+                        "severity": "high",
+                        "description": "Calha aramada vazia visível entre os produtos Febreze Textile em spray, indicando uma rutura de stock óbvia.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_007",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção Centro",
+                        "severity": "high",
+                        "description": "Calha aramada vazia visível entre os produtos Denkmit em spray, indicando uma rutura de stock óbvia.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_008",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção Centro",
+                        "severity": "high",
+                        "description": "Calha aramada vazia visível entre os produtos Denkmit em spray, indicando uma rutura de stock óbvia.",
+                        "confidence": 0.0,
+                        "affected area pct": 0.0,
+                        "shelf fill rate": 0.0,
+                        "products_detected": [
+                            "categoria"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo14(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025349",
+                "timestamp": "2026-06-11T02:53:49Z",
+                "image_path": "data\\images\\test_images\\exemplo14(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Análise detalhada por prateleira e secção:\nPrateleira 1 (Topo):\n  Lado Esquerdo: Completo, com produtos Kiddylicious Veggie Straws e Piccolo.\n  Centro: Completo, com produtos Organix Goodies (Raspberry & Apple, Carrot Cake, Raisins).\n  Lado Direito: Completo, com produtos Heinz (Peach & Apricot, Summer Fruit, Creamy Oat).\n  Status: ok. Não foram encontradas falhas ou espaços vazios.\n\nPrateleira 2:\n  Lado Esquerdo: Completo, com Farley's Rusks e Aptamil (Organic baby rice, Multigrain & berry cereal).\n  Centro: Foi identificada uma rutura de stock crítica. Há uma calha aramada vazia claramente visível entre as caixas de Aptamil (azul) e as latas de Heinz Creamy Oat, mostrando o fundo cinzento da prateleira.\n  Lado Direito: Foi identificada uma rutura de stock crítica. Há uma calha aramada vazia claramente visível à direita das caixas de Heinz Cheesy Veg with Pasta, mostrando o fundo cinzento da prateleira.\n  Status: critical.\n\nPrateleira 3:\n  Lado Esquerdo: Completo, com Heinz Egg Custard with Rice e frascos de Heinz (Chicken Sunday Lunch, Carrot & Chicken Risotto).\n  Centro: Foi identificada uma rutura de stock crítica. Há uma calha aramada vazia claramente visível entre os frascos de Heinz Carrot & Chicken Risotto e os frascos de Heinz Mini Beef Casserole, mostrando o fundo cinzento da prateleira.\n  Lado Direito: Foi identificada uma rutura de stock crítica e significativa. Há uma grande secção vazia, abrangendo múltiplas calhas aramadas, à direita do último frasco de Heinz, com o fundo cinzento da prateleira claramente visível.\n  Status: critical.\n\nPrateleira 4:\n  Lado Esquerdo: Completo, com embalagens Ella's Kitchen (Peach, Pear & Baby Rice; Apple).\n  Centro: Completo, com embalagens Ella's Kitchen (Carrots, Apples & Parsnips; The Red One).\n  Lado Direito: Foi identificada uma rutura de stock crítica. Há uma calha aramada vazia e uma secção maior vazia à direita da embalagem Ella's Kitchen 'The Pink One', mostrando o fundo cinzento da prateleira.\n  Status: critical.\n\nPrateleira 5 (Inferior):\n  Lado Esquerdo: Completo, com embalagens Ella's Kitchen (Thick Chicken Casserole; Chicken Veg) e 'Steam cooked Spaghetti Bolognese'.\n  Centro: Foi identificada uma rutura de stock crítica. Há uma calha aramada vazia claramente visível à direita da embalagem 'Steam cooked Chicken & Veg', mostrando o fundo cinzento da prateleira.\n  Lado Direito: Completo, com produtos Heinz Little Kids (Cottage Pie; Green Bean & Beef).\n  Status: critical.\n\nConclusão: Múltiplas ruturas de stock críticas foram identificadas em várias prateleiras, principalmente através da observação de calhas aramadas vazias e grandes espaços sem produtos.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Rutura de stock numa calha aramada vazia entre as caixas de Aptamil (azul) e as latas de Heinz Creamy Oat. O fundo cinzento da prateleira é visível.",
+                        "confidence": 1.0,
+                        "affected area pct": 5.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "baby cereal",
+                            "baby food"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Rutura de stock numa calha aramada vazia à direita das caixas de Heinz Cheesy Veg with Pasta. O fundo cinzento da prateleira é visível.",
+                        "confidence": 1.0,
+                        "affected area pct": 5.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "baby food",
+                            "baby snacks"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro",
+                        "severity": "high",
+                        "description": "Rutura de stock numa calha aramada vazia entre os frascos de Heinz Carrot & Chicken Risotto e os frascos de Heinz Mini Beef Casserole. O fundo cinzento da prateleira é visível.",
+                        "confidence": 1.0,
+                        "affected area pct": 5.0,
+                        "shelf fill rate": 90.0,
+                        "products_detected": [
+                            "baby food jars"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção direita",
+                        "severity": "high",
+                        "description": "Grande rutura de stock, abrangendo múltiplas calhas aramadas vazias, à direita do último frasco de Heinz. O fundo cinzento da prateleira é claramente visível.",
+                        "confidence": 1.0,
+                        "affected area pct": 20.0,
+                        "shelf fill rate": 80.0,
+                        "products_detected": [
+                            "baby food jars"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_005",
+                        "type": "empty_shelf",
+                        "location": "prateleira 4, secção direita",
+                        "severity": "high",
+                        "description": "Rutura de stock numa calha aramada vazia e uma secção maior vazia à direita da embalagem Ella's Kitchen 'The Pink One'. O fundo cinzento da prateleira é visível.",
+                        "confidence": 1.0,
+                        "affected area pct": 15.0,
+                        "shelf fill rate": 85.0,
+                        "products_detected": [
+                            "baby food pouches"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_006",
+                        "type": "empty_shelf",
+                        "location": "prateleira 5, secção centro",
+                        "severity": "high",
+                        "description": "Rutura de stock numa calha aramada vazia à direita da embalagem 'Steam cooked Chicken & Veg'. O fundo cinzento da prateleira é visível.",
+                        "confidence": 1.0,
+                        "affected area pct": 5.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "baby meals"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo15(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025411",
+                "timestamp": "2026-06-11T02:54:11Z",
+                "image_path": "data\\images\\test_images\\exemplo15(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "A inspeção foi realizada por quadrantes em cada prateleira. Na primeira prateleira (topo), não foram detetados espaços vazios ou desalinhamentos significativos nas secções esquerda, centro ou direita. Na segunda prateleira, na secção centro/direita, foi identificada uma rutura de stock clara, com um espaço vazio visível entre os produtos da marca 'Free', onde uma divisória metálica está desocupada. Na terceira prateleira, na secção centro/esquerda, também foi detetada uma rutura de stock, com um espaço vazio evidente entre os produtos da marca 'ABC' e 'Free', indicando uma divisória metálica desocupada. A quarta prateleira (inferior), embora parcialmente visível, não apresentou problemas óbvios nas áreas observadas.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro/direita",
+                        "severity": "high",
+                        "description": "Espaço vazio claro visível entre os produtos da marca 'Free', indicando uma rutura de stock numa divisória metálica desocupada.",
+                        "confidence": 0.98,
+                        "affected area pct": 0.08,
+                        "shelf fill rate": 0.92,
+                        "products_detected": [
+                            "sanitary pads",
+                            "Free brand"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro/esquerda",
+                        "severity": "high",
+                        "description": "Espaço vazio claro visível entre os produtos da marca 'ABC' e 'Free', indicando uma rutura de stock numa divisória metálica desocupada.",
+                        "confidence": 0.97,
+                        "affected area pct": 0.07,
+                        "shelf fill rate": 0.93,
+                        "products_detected": [
+                            "sanitary pads",
+                            "ABC brand",
+                            "Free brand"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo2(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_025439",
+                "timestamp": "2026-06-11T02:54:39Z",
+                "image_path": "data\\images\\test_images\\exemplo2(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "A análise da Prateleira 1 (topo) não revelou quaisquer falhas; todos os produtos estão bem alinhados e sem espaços vazios nas secções esquerda, centro e direita. Na Prateleira 2 (meio), a secção esquerda e centro estão completas. Contudo, na secção direita, foi identificado um buraco claro entre os produtos, que, de acordo com o protocolo, é reportado como 'empty_shelf'. Não foram observadas calhas completamente vazias. Na Prateleira 3 (fundo), as secções esquerda e centro estão completas. No entanto, na secção direita, também foi identificado um buraco claro entre os produtos, que é reportado como 'empty_shelf'. Tal como na prateleira superior, não há calhas completamente vazias.",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Buraco claro entre os produtos na secção direita da prateleira 2, indicando espaço não preenchido que requer reposição ou alinhamento.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.95,
+                        "products_detected": [
+                            "Coca-Cola Classic 6-pack bottles"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção direita",
+                        "severity": "high",
+                        "description": "Buraco claro entre os produtos na secção direita da prateleira 3, indicando espaço não preenchido que requer reposição ou alinhamento.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.95,
+                        "products_detected": [
+                            "Coca-Cola Classic 6-pack bottles"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo3(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_025447",
+                "timestamp": "2026-06-11T02:54:47Z",
+                "image_path": "data\\images\\test_images\\exemplo3(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "A inspeção detalhada revelou várias falhas de stock. Na primeira prateleira (topo), todas as secções (esquerda, centro, direita) estão bem preenchidas. Na segunda prateleira, a secção central e a direita apresentam múltiplas calhas vazias, indicando rutura de stock. Especificamente na secção direita, observam-se buracos claros entre os produtos, conforme instruído. Na terceira prateleira, as secções esquerda, centro e direita também mostram calhas vazias e buracos claros, com a secção esquerda a apresentar buracos claros entre os produtos, conforme instruído. As prateleiras quatro, cinco e seis (base) estão bem preenchidas em todas as suas secções.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Múltiplas calhas metálicas verticais vazias visíveis entre as pilhas de latas, mostrando o fundo cinzento da prateleira. Rutura de stock óbvia.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.2,
+                        "shelf fill rate": 0.8,
+                        "products_detected": [
+                            "latas"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Buracos claros visíveis entre as pilhas de produtos (latas), com calhas metálicas vazias e o fundo cinzento da prateleira exposto. Rutura de stock óbvia, conforme instruído.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.25,
+                        "shelf fill rate": 0.75,
+                        "products_detected": [
+                            "latas"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção esquerda",
+                        "severity": "high",
+                        "description": "Buracos claros visíveis entre as pilhas de produtos (latas), com calhas metálicas vazias e o fundo cinzento da prateleira exposto. Rutura de stock óbvia, conforme instruído.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.2,
+                        "shelf fill rate": 0.8,
+                        "products_detected": [
+                            "latas"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro",
+                        "severity": "medium",
+                        "description": "Algumas calhas metálicas verticais vazias visíveis entre as pilhas de latas, mostrando o fundo cinzento da prateleira. Rutura de stock.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.15,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "latas"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_005",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção direita",
+                        "severity": "medium",
+                        "description": "Algumas calhas metálicas verticais vazias visíveis entre as pilhas de latas, mostrando o fundo cinzento da prateleira. Rutura de stock.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.15,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "latas"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo4(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": true,
+            "system_output": {
+                "inspection_id": "INS_20260611_025525",
+                "timestamp": "2026-06-11T02:55:25Z",
+                "image_path": "data\\images\\test_images\\exemplo4(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "A inspeção da imagem revelou várias falhas de inventário significativas. Na primeira prateleira (topo), todas as secções (esquerda, centro, direita) parecem estar completamente preenchidas, sem espaços vazios visíveis. Na segunda prateleira, na secção central, foram identificadas aproximadamente 3 calhas vazias entre as latas douradas, indicando uma rutura de stock clara. Na secção direita da mesma prateleira, foram observadas aproximadamente 3 calhas vazias adicionais entre os produtos variados. Na terceira prateleira, na secção centro-esquerda, foram identificadas aproximadamente 4 calhas vazias entre as latas douradas e brancas, indicando uma rutura de stock substancial. Na secção centro-direita da terceira prateleira, foi observada pelo menos uma calha vazia. A quarta prateleira (inferior) está parcialmente visível; as secções visíveis (esquerda com latas 'NAN') parecem preenchidas, sem ruturas óbvias. A presença de múltiplas calhas vazias nas prateleiras intermédias classifica o estado geral como crítico.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Aproximadamente 3 calhas vazias visíveis entre as latas douradas, com o fundo cinzento da prateleira exposto através das divisórias metálicas. Indica rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.25,
+                        "shelf fill rate": 0.75,
+                        "products_detected": [
+                            "latas de leite em pó"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Aproximadamente 3 calhas vazias visíveis entre produtos variados, com o fundo cinzento da prateleira exposto através das divisórias metálicas. Indica rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.3,
+                        "shelf fill rate": 0.7,
+                        "products_detected": [
+                            "produtos embalados diversos"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro-esquerda",
+                        "severity": "high",
+                        "description": "Aproximadamente 4 calhas vazias visíveis entre as latas douradas e brancas, com o fundo cinzento da prateleira exposto através das divisórias metálicas. Indica rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.33,
+                        "shelf fill rate": 0.67,
+                        "products_detected": [
+                            "latas de leite em pó"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro-direita",
+                        "severity": "high",
+                        "description": "Pelo menos 1 calha vazia visível entre as latas douradas e brancas, com o fundo cinzento da prateleira exposto através das divisórias metálicas. Indica rutura de stock.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.11,
+                        "shelf fill rate": 0.89,
+                        "products_detected": [
+                            "latas de leite em pó"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo5(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025537",
+                "timestamp": "2026-06-11T02:55:37Z",
+                "image_path": "data\\images\\test_images\\exemplo5(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "A análise da imagem foi realizada por quadrantes em cada prateleira visível. Na prateleira superior, a visibilidade é limitada. Nas prateleiras 2 e 3 (a contar de cima), os produtos Fermipan estão empilhados e preenchem as secções esquerda, centro e direita. Não foram identificadas calhas vazias ou buracos claros que revelem o fundo cinzento da prateleira, indicando ausência de rutura de stock conforme o protocolo. No entanto, em ambas as prateleiras, especialmente nas secções centrais e direitas, observam-se pequenos desalinhamentos e algumas caixas amassadas ou ligeiramente danificadas. A prateleira inferior apresenta os produtos Fermipan em expositores, que se encontram bem preenchidos e organizados. Não há evidência de rutura de stock, mas sim de pequenas imperfeições na organização e estado das embalagens.",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "prateleira 2, centro/direita",
+                        "severity": "low",
+                        "description": "Algumas caixas de Fermipan na prateleira 2 estão ligeiramente desalinhadas e não perfeitamente empilhadas.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "baker's dry yeast"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "damaged",
+                        "location": "prateleira 2, centro/direita",
+                        "severity": "low",
+                        "description": "Algumas caixas de Fermipan na prateleira 2 apresentam pequenos amassados ou vincos.",
+                        "confidence": 0.85,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "baker's dry yeast"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "misaligned",
+                        "location": "prateleira 3, centro/direita",
+                        "severity": "low",
+                        "description": "Algumas caixas de Fermipan na prateleira 3 estão ligeiramente desalinhadas e não perfeitamente empilhadas.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "baker's dry yeast"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "damaged",
+                        "location": "prateleira 3, centro/direita",
+                        "severity": "low",
+                        "description": "Algumas caixas de Fermipan na prateleira 3 apresentam pequenos amassados ou vincos.",
+                        "confidence": 0.85,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "baker's dry yeast"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo6(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025543",
+                "timestamp": "2026-06-11T02:55:43Z",
+                "image_path": "data\\images\\test_images\\exemplo6(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Análise detalhada por prateleira e secção:\n- Prateleira 1 (topo): As secções Esquerda, Centro e Direita estão completamente preenchidas com sabonetes Olay e Dove. Não foram detetadas falhas. Status: ok.\n- Prateleira 2: A secção Esquerda está bem preenchida com sabonetes Olay. Na secção Centro, há um espaço vazio claro e visível entre os sabonetes Olay e Dove, expondo o fundo cinzento da prateleira. Na secção Direita, existe outro espaço vazio notável entre os grupos de sabonetes Dove. Status: critical.\n- Prateleira 3: A secção Esquerda está preenchida com sabonetes Olay de embalagem castanha. Na secção Centro, foi identificada uma grande rutura de stock, com um espaço vazio significativo entre os sabonetes Olay de embalagem castanha e os de embalagem rosa, revelando o fundo da prateleira. A secção Direita está bem preenchida com sabonetes Olay (rosa), Beauty Shop e Lux. Status: critical.\n- Prateleira 4: As secções Esquerda, Centro e Direita estão totalmente preenchidas com sabonetes de embalagem verde e roxa da marca '3' e sabonetes Lux. Não foram detetadas falhas. Status: ok.\n- Prateleira 5: As secções Esquerda, Centro e Direita estão totalmente preenchidas com sabonetes de embalagem azul, roxa e amarela da marca '3' e sabonetes Lux azuis. Não foram detetadas falhas. Status: ok.\n- Prateleira 6 (inferior): As secções Esquerda, Centro e Direita estão completamente preenchidas com sabonetes de embalagem verde, laranja e vermelha (Shanghai). Não foram detetadas falhas. Status: ok.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção Centro",
+                        "severity": "high",
+                        "description": "Espaço vazio significativo entre os sabonetes Olay e Dove, indicando uma rutura de stock. O fundo da prateleira é visível.",
+                        "confidence": 0.95,
+                        "affected area pct": 12.0,
+                        "shelf fill rate": 80.0,
+                        "products_detected": [
+                            "Olay bar soap",
+                            "Dove bar soap"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção Direita",
+                        "severity": "high",
+                        "description": "Espaço vazio entre os sabonetes Dove, indicando uma rutura de stock. O fundo da prateleira é visível.",
+                        "confidence": 0.95,
+                        "affected area pct": 9.0,
+                        "shelf fill rate": 80.0,
+                        "products_detected": [
+                            "Dove bar soap"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção Centro",
+                        "severity": "high",
+                        "description": "Grande espaço vazio entre os sabonetes Olay de embalagem castanha e rosa, indicando uma rutura de stock substancial. O fundo da prateleira é claramente visível.",
+                        "confidence": 0.98,
+                        "affected area pct": 22.0,
+                        "shelf fill rate": 75.0,
+                        "products_detected": [
+                            "Olay bar soap"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo7(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025549",
+                "timestamp": "2026-06-11T02:55:49Z",
+                "image_path": "data\\images\\test_images\\exemplo7(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Ao analisar a imagem por quadrantes, identifiquei várias falhas. Na primeira prateleira (topo), não foram encontradas falhas, mantendo o status 'ok'. Na segunda prateleira, no lado esquerdo, há um espaço vazio visível acima do sinal 'Temporarily out of stock' e outro espaço vazio claro à direita das toalhitas faciais Simple. No centro, há um espaço vazio claro entre as toalhitas Garnier Micellar e os produtos L'Oréal Revitalift. No lado direito, há um espaço vazio claro entre os produtos L'Oréal Revitalift e o gel de barbear Tesco. Na terceira prateleira, no lado esquerdo, há um espaço vazio claro antes da loção de limpeza Tesco e outro entre a loção de limpeza Tesco e o Neutrogena Visibly Clear. No centro, há um espaço vazio claro entre o hidratante Simple e o gel de limpeza Simple. No lado direito, há um espaço vazio claro entre o removedor de verniz Tesco e o Simple Hydrating Booster, e outro entre o Simple Hydrating Booster e o Nivea Men Face Wash. Na quarta prateleira, no lado direito, há um espaço vazio claro entre a loção corporal E45 Intense Recovery e o desodorizante Sure Men. A quinta prateleira (inferior) não apresenta falhas, mantendo o status 'ok'. As falhas identificadas são todas ruturas de stock em calhas vazias.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção esquerda",
+                        "severity": "high",
+                        "description": "Espaço vazio visível acima do sinal 'Temporarily out of stock', indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Simple Facial Wipes"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção esquerda",
+                        "severity": "high",
+                        "description": "Espaço vazio claro à direita das toalhitas faciais Simple, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Simple Facial Wipes",
+                            "Nivea Cleansing Wipes"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre as toalhitas Garnier Micellar e os produtos L'Oréal Revitalift, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Garnier Micellar Wipes",
+                            "L'Oréal Revitalift"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre os produtos L'Oréal Revitalift e o gel de barbear Tesco, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "L'Oréal Revitalift",
+                            "Tesco Shave Gel"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_005",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção esquerda",
+                        "severity": "high",
+                        "description": "Espaço vazio claro à esquerda da loção de limpeza Tesco, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Tesco Cleansing Lotion"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_006",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção esquerda",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre a loção de limpeza Tesco e o Neutrogena Visibly Clear, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Tesco Cleansing Lotion",
+                            "Neutrogena Visibly Clear"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_007",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre o hidratante Simple e o gel de limpeza Simple, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Simple Hydrating Light Moisturiser",
+                            "Simple Moisturising Facial Wash"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_008",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção direita",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre o removedor de verniz Tesco e o Simple Hydrating Booster, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Tesco Nail Polish Remover",
+                            "Simple Hydrating Booster"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_009",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção direita",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre o Simple Hydrating Booster e o Nivea Men Face Wash, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "Simple Hydrating Booster",
+                            "Nivea Men Face Wash"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_010",
+                        "type": "empty_shelf",
+                        "location": "prateleira 4, secção direita",
+                        "severity": "high",
+                        "description": "Espaço vazio claro entre a loção corporal E45 Intense Recovery e o desodorizante Sure Men, indicando rutura de stock numa calha vazia.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.1,
+                        "shelf fill rate": 0.85,
+                        "products_detected": [
+                            "E45 Intense Recovery Body Lotion",
+                            "Sure Men Deodorant"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "image": "exemplo8(v).jpg",
+            "parsed_successfully": false,
+            "hallucination_detected": false,
+            "system_output": {
+                "error": "Erro na API do Gemini: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+            }
+        },
+        {
+            "image": "exemplo9(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_025719",
+                "timestamp": "2026-06-11T02:57:19Z",
+                "image_path": "data\\images\\test_images\\exemplo9(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "model_reasoning": "Análise detalhada por prateleira e secção: Prateleira 1 (topo): Sem problemas de stock ou desalinhamentos significativos. Prateleira 2 (segunda a contar de cima): Múltiplas rupturas de stock visíveis nas calhas vazias na secção centro e direita. Prateleira 3 (terceira a contar de cima): Múltiplas rupturas de stock visíveis nas calhas vazias na secção esquerda e centro. Prateleira 4 (inferior): Pequenos desalinhamentos de produtos, mas sem rupturas de stock claras nas calhas.",
+                "overall_status": "critical",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o iogurte de cereais. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o primeiro iogurte de alperce. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção centro",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o segundo iogurte de alperce. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção direita",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o iogurte de frutos silvestres. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_005",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção esquerda",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o iogurte de morango. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_006",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção esquerda",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o primeiro iogurte de cereais. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_007",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o iogurte de cereais. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_008",
+                        "type": "empty_shelf",
+                        "location": "prateleira 3, secção centro",
+                        "severity": "high",
+                        "description": "Ruptura de stock: Calha vazia visível após o primeiro iogurte de mirtilo. O fundo cinzento da prateleira está exposto, indicando falta de produto.",
+                        "confidence": 0.98,
+                        "affected area pct": 6.25,
+                        "shelf fill rate": 93.75,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_009",
+                        "type": "misaligned",
+                        "location": "prateleira 4, secção centro",
+                        "severity": "low",
+                        "description": "Alguns iogurtes na prateleira inferior estão ligeiramente desalinhados ou inclinados, não preenchendo completamente o espaço de forma organizada.",
+                        "confidence": 0.9,
+                        "affected area pct": 5.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "yogurt"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

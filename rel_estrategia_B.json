@@ -1,0 +1,397 @@
+{
+    "strategy_used": "strategy_b_cot",
+    "total_images_processed": 15,
+    "json_parse_rate_pct": 93.33333333333333,
+    "hallucination_rate_pct": 0.0,
+    "issue_detection_rate_pct": 36.36,
+    "false_positive_rate_pct": 69.23,
+    "severity_accuracy_pct": 25.0,
+    "raw_results": [
+        {
+            "image": "exemplo1(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033849",
+                "timestamp": "2026-06-11T03:38:49Z",
+                "image_path": "data\\images\\test_images\\exemplo1(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem exibe um corredor de supermercado com prateleiras de produtos. Consigo identificar claramente duas prateleiras principais cheias de garrafas de Sprite verdes. Há também uma prateleira superior parcialmente visível e desfocada, e uma prateleira inferior também parcialmente visível. O foco principal está nas duas prateleiras do meio. \nPasso 2 (Análise por Zonas):\n- Prateleira Superior (parcialmente visível): Esta prateleira está desfocada e apenas mostra o topo de alguns produtos verdes/amarelos. Não é possível identificar com confiança espaços vazios, produtos caídos ou desalinhados devido à falta de clareza.\n- Prateleira do Meio (totalmente visível): Esta prateleira está excecionalmente bem abastecida com garrafas de Sprite. Todas as garrafas estão em pé, bem alinhadas e com os rótulos virados para a frente. Não há espaços vazios visíveis, produtos caídos ou desalinhados. A densidade de preenchimento é muito alta. Há uma etiqueta de preço '28' visível acima desta prateleira.\n- Prateleira Inferior (maioritariamente visível): Esta prateleira também está muito bem abastecida com garrafas verdes, presumivelmente Sprite. Todas as garrafas visíveis estão em pé e parecem estar bem alinhadas. Não há espaços vazios óbvios ou problemas de desalinhamento na parte visível da prateleira.\nPasso 3 (Classificação):\n- Prateleira do Meio: A severidade dos problemas é baixa (praticamente inexistente). O nível de preenchimento (fill rate) é excelente, próximo de 100%.\n- Prateleira Inferior: A severidade dos problemas é baixa (praticamente inexistente). O nível de preenchimento (fill rate) é muito bom, também próximo de 100% na área visível.\n- No geral, o estado do inventário nas prateleiras visíveis é excelente, sem problemas significativos de falta de stock, desalinhamento ou danos."
+            }
+        },
+        {
+            "image": "exemplo10(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033849",
+                "timestamp": "2026-06-11T03:38:49Z",
+                "image_path": "data\\images\\test_images\\exemplo10(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra uma secção de um corredor de supermercado, especificamente uma área refrigerada que contém produtos lácteos e/ou bebidas vegetais. É possível identificar claramente quatro prateleiras principais, empilhadas verticalmente. A iluminação é adequada e a maioria dos produtos é visível, embora alguns preços estejam parcialmente obscurecidos.\n\nPasso 2 (Análise por Zonas):\n- Prateleira 1 (Superior, parcialmente visível): Esta prateleira está maioritariamente obscurecida na parte superior da imagem. Alguns pequenos cartões quadrados são visíveis no lado direito. Devido à baixa visibilidade, não é possível avaliar com precisão a taxa de preenchimento ou identificar quaisquer problemas.\n- Prateleira 2 (Segunda de cima): No lado esquerdo, há vários cartões de 'Овсяша' (leite de aveia), que parecem bem abastecidos e alinhados. No meio, vários cartões de 'moloko' (leite, provavelmente vegetal) estão visíveis, geralmente bem alinhados. No lado direito, mais cartões de 'moloko' com embalagens amarelas/laranjas também parecem bem abastecidos e alinhados. Não há espaços vazios significativos ou produtos caídos/desalinhados de forma notória.\n- Prateleira 3 (Terceira de cima): O lado esquerdo apresenta várias embalagens rotuladas 'МОЛОКО НАТУРАЛЬНОЕ' (Leite Natural) em embalagens azuis e brancas (sacos ou cartões flexíveis). Estão bem abastecidas e geralmente alinhadas. O lado direito contém vários cartões de leite 'Parmalat', também bem abastecidos e alinhados. Esta prateleira está muito bem organizada e preenchida.\n- Prateleira 4 (Inferior): No lado esquerdo, um cartão rotulado 'МОЛОКО' (Leite) em embalagem vermelha e branca está bem posicionado. No meio, várias garrafas brancas com tampas laranja (provavelmente produtos lácteos como kefir ou iogurte líquido) estão bem abastecidas e alinhadas. No lado direito, vários cartões de leite, possivelmente da marca 'Простоквашино', com imagens de vacas e famílias, estão bem abastecidos e alinhados. Esta prateleira também está muito bem abastecida e organizada.\n\nPasso 3 (Classificação):\n- Prateleira 1: Não é possível classificar devido à visibilidade insuficiente.\n- Prateleira 2: A severidade de problemas é baixa. Os produtos estão geralmente bem alinhados e abastecidos. A taxa de preenchimento é alta (estimada em >90%).\n- Prateleira 3: A severidade de problemas é baixa. Os produtos estão muito bem alinhados e abastecidos. A taxa de preenchimento é alta (estimada em >95%).\n- Prateleira 4: A severidade de problemas é baixa. Os produtos estão muito bem alinhados e abastecidos. A taxa de preenchimento é alta (estimada em >95%).\n\nConclusão Geral: A secção auditada apresenta um excelente estado de inventário. Não foram identificados problemas significativos como prateleiras vazias, produtos danificados, produtos errados ou desalinhamentos graves. A taxa de preenchimento é consistentemente alta em todas as prateleiras visíveis, e a organização geral é muito boa."
+            }
+        },
+        {
+            "image": "exemplo11(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033849",
+                "timestamp": "2026-06-11T03:38:49Z",
+                "image_path": "data\\images\\test_images\\exemplo11(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "prateleira 1, secção geral",
+                        "severity": "low",
+                        "description": "Vários produtos estão ligeiramente desalinhados ou empilhados de forma irregular, afetando a apresentação visual da prateleira. Não há produtos caídos ou espaços vazios significativos.",
+                        "confidence": 0.85,
+                        "affected area pct": 25.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "Ceres Plus",
+                            "bebida em pó"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra uma prateleira de retalho com vários produtos embalados em recipientes cilíndricos, que parecem ser bebidas em pó ou fórmulas. A imagem apresenta bastante ruído (pontos pretos e brancos) e algumas áreas estão obscurecidas por blocos pretos, o que dificulta a clareza. Consigo identificar claramente uma prateleira, que é a superfície horizontal verde/azul na parte inferior, onde os produtos estão dispostos. Parece haver uma parede clara ao fundo.\nPasso 2 (Análise por Zonas): Percorrendo a única prateleira visível da esquerda para a direita:\n- Extremo esquerdo: Há uma pilha de produtos. O produto mais à esquerda parece estar ligeiramente inclinado. Os produtos estão empilhados uns sobre os outros.\n- Centro-esquerda: Mais produtos empilhados. Um dos produtos na frente tem um rótulo 'Ceres Plus' visível. Há um bloco preto a obscurecer parte de um produto nesta área.\n- Centro: Mais produtos empilhados. Alguns parecem estar ligeiramente desalinhados ou com pequenas inclinações, mas não há produtos caídos. A forma como estão empilhados não é uniforme.\n- Centro-direita: Continuação dos produtos empilhados. Os rótulos são consistentes com os anteriores.\n- Extremo direito: Produtos empilhados até à extremidade da imagem. Não há grandes espaços vazios. No geral, não há espaços vazios significativos nem produtos caídos. O principal problema é o desalinhamento e a forma como estão empilhados, que pode não ser a ideal para a apresentação. A qualidade da imagem (ruído e blocos pretos) é um fator limitante para uma análise mais precisa.\nPasso 3 (Classificação): Com base nas observações, a severidade dos problemas é baixa. Não há problemas críticos como prateleiras vazias ou produtos danificados. O desalinhamento e a irregularidade no empilhamento são problemas menores de apresentação. O nível de preenchimento (fill rate) é alto, próximo de 95% para a área visível da prateleira, pois não há espaços vazios. O status geral é classificado como 'warning' devido a estas pequenas questões de apresentação, apesar do alto fill rate."
+            }
+        },
+        {
+            "image": "exemplo12(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033855",
+                "timestamp": "2026-06-11T03:38:55Z",
+                "image_path": "data\\images\\test_images\\exemplo12(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "prateleira única, secção esquerda (Cappy RIDO SEFTAL SUYU) e secção central (Dimes 7/24)",
+                        "severity": "low",
+                        "description": "Algumas caixas de sumo Cappy RIDO SEFTAL SUYU na secção esquerda estão ligeiramente desalinhadas/empurradas para trás. Há também pequenas inconsistências no espaçamento entre as caixas Dimes 7/24, embora a maioria dos produtos esteja bem alinhada.",
+                        "confidence": 0.9,
+                        "affected area pct": 0.05,
+                        "shelf fill rate": 0.98,
+                        "products_detected": [
+                            "Cappy RIDO SEFTAL SUYU",
+                            "Dimes 7/24",
+                            "Dimes %100",
+                            "Cappy BAHÇE",
+                            "M Visne Nektari"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra uma única prateleira de supermercado completamente preenchida com várias caixas de sumo/néctar de diferentes marcas e sabores. Não há prateleiras vazias ou grandes lacunas visíveis. Passo 2 (Análise por Zonas): Percorrendo a prateleira da esquerda para a direita, observo os seguintes produtos: Começando pela esquerda, há várias caixas de sumo da marca 'Cappy' com a designação 'RIDO SEFTAL SUYU' (néctar de pêssego). Estas estão maioritariamente bem alinhadas, mas as primeiras unidades parecem estar ligeiramente empurradas para trás em comparação com as restantes. A seguir, encontram-se caixas da marca 'Dimes' com a designação '7/24', que parecem ser de fruta mista. Estas estão geralmente bem alinhadas, mas o espaçamento entre algumas unidades não é perfeitamente uniforme. Depois, há caixas 'Dimes %100' (100% sumo) com imagem de romã, que estão muito bem alinhadas. Seguem-se mais caixas 'Cappy', desta vez 'BAHÇE' (jardim) com imagem de pêssego, também bem alinhadas. Finalmente, na extremidade direita, há caixas com o logótipo 'M' e 'Visne Nektari' (néctar de cereja), que estão perfeitamente alinhadas. Não foram identificados espaços vazios significativos, produtos caídos ou danificados. Passo 3 (Classificação): A prateleira apresenta um nível de preenchimento (fill rate) muito elevado, estimado em cerca de 98-100%. Os problemas identificados são de natureza menor: um ligeiro desalinhamento de algumas caixas Cappy RIDO SEFTAL SUYU na secção esquerda e pequenas inconsistências no espaçamento das caixas Dimes 7/24. A severidade destes problemas é classificada como 'low', pois não afetam a disponibilidade do produto nem a apresentação de forma significativa. O estado geral da prateleira é 'ok'."
+            }
+        },
+        {
+            "image": "exemplo13(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033906",
+                "timestamp": "2026-06-11T03:39:06Z",
+                "image_path": "data\\images\\test_images\\exemplo13(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra uma prateleira de retalho com produtos de limpeza e ambientadores. Consegui identificar uma prateleira principal onde os produtos estão dispostos. Abaixo dos produtos, há etiquetas de preço e a borda inferior da prateleira, mas não há uma segunda prateleira distinta com produtos visíveis. Portanto, a análise focar-se-á nesta única prateleira principal.\n\nPasso 2 (Análise por Zonas):\n- Secção Esquerda: Dois ambientadores Febreze Air (tampas verdes) estão visíveis, em pé e bem alinhados. Em seguida, duas garrafas de spray Febreze Textile (azuis com pulverizadores amarelos) estão visíveis, também em pé e bem alinhadas. Mais à direita, outra garrafa de spray Febreze Textile está visível, igualmente em pé e alinhada. Há um pequeno espaço entre os produtos Febreze Air e Febreze Textile, mas não parece ser um espaço vazio na prateleira, apenas um espaçamento entre tipos de produtos.\n- Secção Central: Várias garrafas de spray azuis (marca Denkmit) estão visíveis. Estão geralmente em pé e alinhadas. Há alguns recipientes brancos mais pequenos (marca Denkmit) atrás das garrafas de spray e alguns recipientes brancos maiores com tampas verdes (Denkmit Oxi Power) à frente. Todos os produtos nesta secção parecem estar corretamente posicionados e geralmente bem alinhados. Não há espaços vazios significativos ou produtos caídos.\n- Secção Direita: Mais recipientes Denkmit Oxi Power com tampas verdes estão visíveis. Estão em pé e bem alinhados. Mais à direita, uma garrafa de spray branca (marca Denkmit) está visível, em pé e alinhada. Há um pequeno espaço à direita da última garrafa de spray branca, mas está na extremidade da imagem e não indica um grande espaço vazio.\n\nPasso 3 (Classificação):\n- Espaços Vazios: Não foram observados espaços vazios significativos na prateleira. A prateleira parece estar adequadamente abastecida.\n- Produtos Caídos/Desalinhados: Todos os produtos parecem estar em pé e geralmente bem alinhados. Não há itens caídos ou severamente desalinhados visíveis.\n- Nível de Preenchimento (Fill Rate): A prateleira parece ter um alto nível de preenchimento. A maioria dos espaços de produtos está ocupada.\n- Estado Geral: A condição da prateleira é boa. Não foram identificados problemas críticos."
+            }
+        },
+        {
+            "image": "exemplo14(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033906",
+                "timestamp": "2026-06-11T03:39:06Z",
+                "image_path": "data\\images\\test_images\\exemplo14(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 4, secção meio-direita",
+                        "severity": "medium",
+                        "description": "Uma unidade do pack de 4 frascos de Heinz Chicken Sunday Lunch está em falta, criando um espaço vazio visível na bandeja.",
+                        "confidence": 0.95,
+                        "affected area pct": 25.0,
+                        "shelf fill rate": 90.0,
+                        "products_detected": [
+                            "frascos de comida para bebé"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "empty_shelf",
+                        "location": "prateleira 4, secção meio-direita",
+                        "severity": "medium",
+                        "description": "Uma unidade do pack de 4 frascos de Heinz Carrot & Chicken Risotto está em falta, criando um espaço vazio visível na bandeja.",
+                        "confidence": 0.95,
+                        "affected area pct": 25.0,
+                        "shelf fill rate": 90.0,
+                        "products_detected": [
+                            "frascos de comida para bebé"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_003",
+                        "type": "empty_shelf",
+                        "location": "prateleira 4, secção direita",
+                        "severity": "medium",
+                        "description": "Uma unidade do pack de 4 frascos de Heinz Mini Beef Casserole está em falta, criando um espaço vazio visível na bandeja.",
+                        "confidence": 0.95,
+                        "affected area pct": 25.0,
+                        "shelf fill rate": 90.0,
+                        "products_detected": [
+                            "frascos de comida para bebé"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_004",
+                        "type": "empty_shelf",
+                        "location": "prateleira 5, secção meio",
+                        "severity": "medium",
+                        "description": "Uma unidade do pack de 4 frascos de Heinz (sabor não identificado) está em falta, criando um espaço vazio visível na bandeja.",
+                        "confidence": 0.9,
+                        "affected area pct": 25.0,
+                        "shelf fill rate": 90.0,
+                        "products_detected": [
+                            "frascos de comida para bebé"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_005",
+                        "type": "misaligned",
+                        "location": "prateleira 2, secção esquerda",
+                        "severity": "low",
+                        "description": "O produto Kiddylicious Veggie Straws está ligeiramente inclinado, não estando perfeitamente alinhado com os outros produtos.",
+                        "confidence": 0.85,
+                        "affected area pct": 5.0,
+                        "shelf fill rate": 98.0,
+                        "products_detected": [
+                            "snacks para crianças"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem apresenta um corredor de supermercado focado em produtos para bebés e crianças, incluindo snacks, cereais e comida em frascos/saquetas. Identifico claramente 6 prateleiras principais com produtos, além de uma prateleira superior com sinalização e uma prateleira inferior parcialmente visível. O estado geral parece razoavelmente bom, mas com algumas falhas de stock e desalinhamentos. \n\nPasso 2 (Análise por Zonas):\n*   Prateleira 1 (Superior): Contém apenas sinalização verde ('For your safety please ask a colleague for help.'). Não há produtos visíveis para auditoria.\n*   Prateleira 2: Da esquerda para a direita, observo Kiddylicious Veggie Straws (ligeiramente inclinado), Piccolo baby food (parcialmente visível), Organix Goodies (Raspberry & Apple, Carrot Cake, Raisins, Carrot Cake novamente) e Heinz Peach & Apricot Blossom. Todos os produtos Organix e Heinz estão bem preenchidos. O Kiddylicious está ligeiramente desalinhado.\n*   Prateleira 3: Contém Farley's Rusks, várias caixas de Aptamil (Organic baby rice, Multigrain & berry cereal), Heinz Chocolate Biscotti, Heinz Creamy Oat (duas filas), Heinz Summer Fruit Multigrain (duas filas), Fruit Bowl Raspberry Yogurt Flakes e Little Tikes Carry Case Puzzle Pack (pendurado). Esta prateleira está muito bem preenchida e alinhada.\n*   Prateleira 4: Inclui mais caixas de Aptamil, Heinz Multigrain with Mediterranean Vegetable Dinners e Heinz Cheesy Veg with Pasta Dinners. No entanto, na secção dos frascos de comida para bebé Heinz, há falhas notáveis: três bandejas de 4 frascos (Chicken Sunday Lunch, Carrot & Chicken Risotto, Mini Beef Casserole) têm apenas 3 frascos cada, indicando uma unidade em falta em cada pack. Há também uma caixa de Heinz Egg Custard with Rice no topo.\n*   Prateleira 5: Apresenta uma variedade de saquetas Ella's Kitchen (Peach, Pear & Baby Rice; Apple & Banana; Bananas & Apples; Mango, Carrot & Apple; Carrots, Apples & Parsnips; The Red One; Pink One; Big Cheesy; Fish Pie; Spag Bol; Beef Stew), que estão bem preenchidas. No meio, há outra bandeja de frascos Heinz (sabor não identificado) com uma unidade em falta, similar às da prateleira 4.\n*   Prateleira 6 (Inferior): Contém saquetas Ella's Kitchen (Chicken Casserole, Chicken & Veg) e refeições Heinz Little Kids (Spaghetti Bolognese, Cottage Pie, Green Bean & Beef). Todos estes produtos estão bem preenchidos e alinhados. À direita, há alguns rolos de produtos não alimentares (possivelmente sacos do lixo ou papel de embrulho).\n\nPasso 3 (Classificação):\n*   Prateleira 2: O fill rate é muito alto (~98%). O único problema é um ligeiro desalinhamento do Kiddylicious Veggie Straws, classificado como 'low' severity.\n*   Prateleira 3: O fill rate é excelente (~99%). Não foram identificados problemas significativos, resultando numa 'low' severity (sem issues).\n*   Prateleira 4: O fill rate geral da prateleira é bom (~90%), mas a secção dos frascos de comida para bebé Heinz apresenta falhas claras. Três bandejas de 4 frascos têm uma unidade em falta cada, o que representa 25% de stock em falta para esses produtos específicos. Isto é classificado como 'medium' severity devido ao impacto na disponibilidade e apresentação do produto.\n*   Prateleira 5: O fill rate geral da prateleira é bom (~90%). Similar à prateleira 4, uma bandeja de frascos Heinz tem uma unidade em falta, classificada como 'medium' severity.\n*   Prateleira 6: O fill rate é muito alto (~98%). Não foram identificados problemas significativos, resultando numa 'low' severity (sem issues).\n\nCom base nestas observações, o status geral da loja é 'warning' devido às múltiplas ocorrências de frascos de comida para bebé em falta nas bandejas, o que afeta a perceção de stock e a organização, apesar de a maioria dos outros produtos estarem bem abastecidos."
+            }
+        },
+        {
+            "image": "exemplo15(vio).jpg",
+            "parsed_successfully": false,
+            "hallucination_detected": false,
+            "system_output": {
+                "error": "Erro na API do Gemini: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+            }
+        },
+        {
+            "image": "exemplo2(n).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033923",
+                "timestamp": "2026-06-11T03:39:23Z",
+                "image_path": "data\\images\\test_images\\exemplo2(n).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra um expositor de retalho com três prateleiras distintas, todas elas preenchidas com produtos Coca-Cola. A prateleira superior contém embalagens múltiplas de latas de Coca-Cola. As prateleiras do meio e inferior contêm embalagens múltiplas de garrafas de vidro de Coca-Cola. Todos os produtos parecem ser da variedade Coca-Cola Classic. O expositor parece estar bem abastecido e organizado de forma geral.\nPasso 2 (Análise por Zonas):\n- Prateleira Superior: Percorrendo da esquerda para a direita, todas as embalagens múltiplas de latas de Coca-Cola estão presentes e bem alinhadas. Não há espaços vazios visíveis, produtos caídos ou desalinhamentos significativos. O preenchimento é excelente.\n- Prateleira do Meio: Da esquerda para a direita, as embalagens múltiplas de garrafas de vidro de Coca-Cola estão todas no lugar. Não foram identificados espaços vazios, produtos danificados ou desalinhamentos notáveis. O preenchimento é muito bom.\n- Prateleira Inferior: Similarmente às outras prateleiras, esta prateleira está completamente preenchida com embalagens múltiplas de garrafas de vidro de Coca-Cola. Não há falhas de stock, produtos fora do lugar ou problemas de alinhamento evidentes. O preenchimento é ótimo.\nPasso 3 (Classificação): Com base na análise detalhada, não foram identificados problemas significativos em nenhuma das prateleiras. Não há espaços vazios, produtos danificados, desalinhados ou etiquetas em falta. O nível de preenchimento (fill rate) em todas as prateleiras é extremamente alto, aproximando-se dos 100%. A severidade de quaisquer problemas é classificada como nula, pois não foram encontrados. O estado geral do inventário visual é excelente."
+            }
+        },
+        {
+            "image": "exemplo3(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033923",
+                "timestamp": "2026-06-11T03:39:23Z",
+                "image_path": "data\\images\\test_images\\exemplo3(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "Expositor promocional, secção superior direita",
+                        "severity": "low",
+                        "description": "Alguns produtos na secção superior do expositor promocional parecem ligeiramente desalinhados ou empilhados de forma solta, mas não caídos.",
+                        "confidence": 0.85,
+                        "affected area pct": 5.0,
+                        "shelf_fill_rate": 95.0,
+                        "products_detected": [
+                            "leite em pó",
+                            "alimentos para bebé"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra um corredor de uma loja, provavelmente um supermercado ou farmácia, com várias prateleiras e expositores repletos de produtos, predominantemente latas e caixas de leite em pó ou alimentos similares. Identifico um conjunto de prateleiras à esquerda, uma grande unidade de prateleiras metálicas no centro que é o foco principal, e um expositor promocional à direita, com mais prateleiras visíveis ao fundo. A imagem apresenta bastante ruído (pontos brancos) e algumas áreas estão obscurecidas por retângulos pretos, o que dificulta a análise detalhada em certas zonas. No geral, a loja parece bem abastecida.\n\nPasso 2 (Análise por Zonas):\n- Prateleiras da Esquerda (parcialmente visíveis): Todas as prateleiras visíveis (cerca de 4-5) parecem estar completamente cheias com latas de diferentes cores (branco/azul, branco/vermelho, dourado/castanho). Não há espaços vazios óbvios ou produtos desalinhados. O fill rate é estimado em 100% para as áreas visíveis.\n- Unidade de Prateleiras Central (Lado Esquerdo): As prateleiras superiores contêm caixas vermelhas. As prateleiras abaixo estão repletas de latas douradas. Todas as 6-7 prateleiras visíveis neste lado estão completamente cheias e os produtos estão bem organizados. O fill rate é estimado em 100%.\n- Unidade de Prateleiras Central (Lado Direito): As prateleiras superiores contêm caixas vermelhas. As prateleiras abaixo estão repletas de latas douradas e, mais abaixo, latas brancas/verdes. Todas as 6-7 prateleiras visíveis neste lado estão completamente cheias e os produtos estão bem organizados. O fill rate é estimado em 100%.\n- Expositor Promocional (Direita, à frente): Este é um grande expositor de cartão com vários níveis. A maioria dos produtos (caixas) está bem disposta e o expositor parece cheio. No entanto, na secção superior, alguns produtos parecem ligeiramente desalinhados ou empilhados de forma mais solta, embora não haja produtos caídos. Uma área está obscurecida por um retângulo preto. O fill rate é estimado em 95% devido a este ligeiro desalinhamento.\n- Prateleiras do Fundo (Direita): Estas prateleiras estão mais distantes e menos nítidas devido ao ruído da imagem. Parecem estar cheias com produtos embalados em azul e branco. Não consigo identificar problemas claros de preenchimento ou organização.\n\nPasso 3 (Classificação):\n- Severidade dos Problemas: Não foram identificados problemas críticos como prateleiras vazias, produtos danificados ou grandes desorganizações. O único problema notável é um ligeiro desalinhamento de alguns produtos na secção superior do expositor promocional, o que é considerado de baixa severidade.\n- Nível de Preenchimento (Fill Rate): A maioria das prateleiras visíveis apresenta um fill rate de 100%. O expositor promocional tem um fill rate de aproximadamente 95% devido ao ligeiro desalinhamento. No geral, o nível de preenchimento da loja é muito alto.\n- Classificação Geral: 'ok'. A loja está extremamente bem abastecida e organizada. O pequeno desalinhamento no expositor promocional é um problema menor que não afeta significativamente o inventário ou a apresentação geral da loja."
+            }
+        },
+        {
+            "image": "exemplo4(a).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033931",
+                "timestamp": "2026-06-11T03:39:31Z",
+                "image_path": "data\\images\\test_images\\exemplo4(a).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem apresenta uma secção de prateleiras de retalho, provavelmente de uma loja de conveniência, supermercado ou farmácia, exibindo uma variedade de produtos enlatados ou em embalagens cilíndricas, que parecem ser predominantemente fórmulas infantis ou leite em pó. A imagem possui um nível significativo de ruído (pontos brancos e pretos espalhados) e algumas áreas estão obscurecidas por quadrados pretos, o que dificulta a análise detalhada. Consigo identificar claramente quatro prateleiras horizontais principais, além de uma secção inferior.\nPasso 2 (Análise por Zonas):\n*   Prateleira Superior (Prateleira 1): Esta prateleira está bem preenchida com produtos variados, principalmente latas. Os produtos parecem estar geralmente alinhados, embora a qualidade da imagem e os reflexos dificultem a avaliação precisa. Não há espaços vazios óbvios ou produtos caídos.\n*   Segunda Prateleira (Prateleira 2): Predominantemente preenchida com latas douradas/amarelas, que parecem ser um tipo de fórmula infantil. Os produtos estão bem estocados e alinhados. Não foram identificados espaços vazios significativos ou produtos desalinhados/caídos.\n*   Terceira Prateleira (Prateleira 3): No lado esquerdo, há várias latas brancas e azuis com a marca \"NAN\", que estão bem estocadas. A secção central e direita contém mais latas douradas/amarelas e algumas embalagens brancas/vermelhas. Um quadrado preto obscurece uma pequena parte desta secção, mas não revela um problema de inventário. A prateleira parece bem preenchida e os produtos estão razoavelmente alinhados.\n*   Quarta Prateleira (Prateleira 4): O lado esquerdo continua com latas \"NAN\" brancas e azuis, bem organizadas. O centro e o lado direito mostram mais latas douradas/amarelas e algumas embalagens vermelhas e verdes na parte inferior direita. Não há espaços vazios visíveis ou produtos caídos.\n*   Secção Inferior: Esta área é menos nítida, mas parece conter mais produtos, incluindo embalagens verdes no canto inferior direito. Um quadrado preto também obscurece uma parte desta secção. No entanto, não há indícios de problemas de inventário como espaços vazios ou produtos caídos.\nPasso 3 (Classificação): Com base na análise visual, as prateleiras apresentam um bom nível de preenchimento. Não foram identificados espaços vazios significativos, produtos caídos ou desalinhados de forma crítica. A organização geral dos produtos parece adequada.\n*   Severidade dos Problemas: A severidade de problemas de inventário é classificada como \"baixa\" ou \"inexistente\", pois não há problemas claros visíveis.\n*   Nível de Preenchimento (Fill Rate): O nível de preenchimento das prateleiras é muito alto, estimando-se acima de 90%, indicando um bom stock.\n*   Limitações: A principal limitação da análise é a baixa qualidade da imagem (ruído) e a presença de quadrados pretos que obscurecem pequenas áreas, o que poderia ocultar problemas menores, mas não há evidências de problemas maiores."
+            }
+        },
+        {
+            "image": "exemplo5(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033931",
+                "timestamp": "2026-06-11T03:39:31Z",
+                "image_path": "data\\images\\test_images\\exemplo5(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "prateleira superior, secção fermento",
+                        "severity": "medium",
+                        "description": "Várias caixas de 'fermipan' na camada superior da prateleira estão desalinhadas, afetando a apresentação visual do produto.",
+                        "confidence": 0.95,
+                        "affected area pct": 25.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "fermipan baker's dry yeast"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "damaged",
+                        "location": "prateleira superior, secção fermento",
+                        "severity": "low",
+                        "description": "Algumas caixas de 'fermipan' na camada superior apresentam pequenos amassadelas ou vincos, indicando danos menores na embalagem.",
+                        "confidence": 0.9,
+                        "affected area pct": 15.0,
+                        "shelf fill rate": 95.0,
+                        "products_detected": [
+                            "fermipan baker's dry yeast"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem exibe uma secção de prateleiras de retalho, focando-se principalmente em caixas de fermento de padeiro seco da marca 'fermipan'. São visíveis duas prateleiras principais: uma superior, mais ao nível dos olhos, e uma inferior. Há também produtos menos visíveis e desfocados ao fundo e à direita.\nPasso 2 (Análise por Zonas):\nPrateleira Superior: Esta prateleira está preenchida com múltiplas pilhas de caixas de 'fermipan'.\nEsquerda: Uma pilha de caixas de 'fermipan' é visível, com as caixas superiores ligeiramente desalinhadas. Uma mão está a tocar numa das caixas. As datas de validade visíveis são 'L089/26 P 03/2026 BBE 03/2028'.\nCentro: Continuam as pilhas de caixas de 'fermipan'. Algumas caixas na camada superior apresentam pequenos amassadelas ou vincos e estão ligeiramente desalinhadas. As datas de validade incluem 'L089/26 P 03/2026 BBE 03/2028' e 'L349/25 P 12/2025 BBE 12/2027'. Há pequenos espaços entre algumas pilhas, mas a prateleira está maioritariamente cheia.\nDireita: As pilhas de caixas continuam, com uma caixa claramente a mostrar 'L349/25 P 12/2025 BBE 12/2027'. À direita destas caixas, há outros produtos em recipientes vermelhos, mas não são 'fermipan' e estão fora de foco.\nPrateleira Inferior: Esta prateleira contém caixas de exposição de 'fermipan'.\nEsquerda e Centro: Duas caixas de exposição de 'fermipan' são visíveis, ambas parecem bem abastecidas e organizadas. Uma delas tem um autocolante promocional 'GANHE UMA AIR FRYER'.\nDireita: A caixa de exposição continua, e à sua direita, há outros produtos em recipientes vermelhos.\nPasso 3 (Classificação):\nPrateleira Superior:\nProblemas: Observam-se várias caixas desalinhadas e algumas com pequenos danos (amassadelas/vincos) na camada superior. Estes problemas afetam a apresentação visual, mas não a disponibilidade do produto.\nSeveridade: Baixa a Média para o desalinhamento e danos menores.\nNível de Preenchimento (Fill Rate): Alto, aproximadamente 95% para a secção de 'fermipan'.\nPrateleira Inferior:\nProblemas: Não foram identificados problemas significativos de desalinhamento ou danos. As caixas de exposição estão bem organizadas.\nSeveridade: Baixa (sem problemas notáveis).\nNível de Preenchimento (Fill Rate): Alto, aproximadamente 100% para a secção de 'fermipan'.\nEstado Geral: O estado geral é classificado como 'warning' devido aos problemas de apresentação (desalinhamento e pequenos danos) na prateleira superior, apesar do bom nível de preenchimento."
+            }
+        },
+        {
+            "image": "exemplo6(s).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033937",
+                "timestamp": "2026-06-11T03:39:37Z",
+                "image_path": "data\\images\\test_images\\exemplo6(s).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem apresenta um corredor de supermercado ou drogaria com múltiplas prateleiras, predominantemente preenchidas com sabonetes em barra e alguns produtos de higiene líquida. Consigo identificar um total de 9 prateleiras principais, incluindo uma prateleira superior mais estreita. A impressão geral é de um inventário muito bem abastecido e organizado.\n\nPasso 2 (Análise por Zonas):\n- Prateleira 1 (Topo): Contém caixas brancas da marca Olay e Dove. Os produtos estão bem alinhados e a prateleira está cheia.\n- Prateleira 2: Exibe caixas brancas da marca Olay e Dove. Todos os produtos estão organizados e a prateleira está completamente preenchida.\n- Prateleira 3: Apresenta caixas bege da marca Olay, caixas rosa da marca Olay e algumas caixas vermelhas e azuis de 'Beauty Soap'. A prateleira está bem abastecida e os produtos estão alinhados.\n- Prateleira 4: Contém caixas verdes e roxas com caracteres chineses (possivelmente '3') e caixas da marca Lux. A prateleira está cheia e organizada.\n- Prateleira 5: Exibe caixas azuis, roxas e amarelas com caracteres chineses, e caixas azuis da marca Lux. Todos os produtos estão bem dispostos e a prateleira está completamente preenchida.\n- Prateleira 6: Apresenta caixas verdes e amarelas com caracteres chineses, e caixas rosa da marca Lux. A prateleira está bem abastecida e organizada.\n- Prateleira 7: Contém embalagens plásticas verdes e laranja/amarelas. A prateleira está cheia e os produtos estão bem arrumados.\n- Prateleira 8: Exibe caixas amarelas com caracteres chineses, embalagens plásticas azuis/brancas e caixas vermelhas de 'Shanghai Soap'. A prateleira está completamente preenchida e organizada.\n- Prateleira 9 (Inferior): Apresenta embalagens plásticas azuis/brancas, caixas vermelhas de 'Shanghai Soap' e caixas rosa da marca Lux. A prateleira está cheia e os produtos estão bem dispostos.\n\nNão foram observados espaços vazios significativos, produtos caídos, danificados ou desalinhamentos que pudessem ser classificados como um problema. As etiquetas de preço estão visíveis e parecem estar no lugar correto.\n\nPasso 3 (Classificação):\nCom base na análise detalhada, a condição geral do inventário é excelente. Todas as prateleiras estão muito bem abastecidas, com um 'fill rate' extremamente alto, próximo dos 100%. Não há problemas visíveis de produtos em falta, danificados, mal posicionados ou etiquetas ausentes. A organização é exemplar. Portanto, o status geral é classificado como 'ok' e não foram identificados problemas que justifiquem a criação de 'issues'."
+            }
+        },
+        {
+            "image": "exemplo7(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_033937",
+                "timestamp": "2026-06-11T03:39:37Z",
+                "image_path": "data\\images\\test_images\\exemplo7(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "empty_shelf",
+                        "location": "prateleira 2, secção esquerda",
+                        "severity": "high",
+                        "description": "Espaço vazio significativo na prateleira, com sinalização de 'Temporarily out of stock' para toalhitas faciais Nivea.",
+                        "confidence": 0.95,
+                        "affected area pct": 0.2,
+                        "shelf fill rate": 0.8,
+                        "products_detected": [
+                            "Nivea Cleansing Facial Wipes"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem mostra um corredor de loja de retalho com seis prateleiras principais e uma área de prateleira inferior/chão, exibindo produtos de higiene pessoal e beleza. A iluminação é boa e a maioria dos produtos e etiquetas de preço são visíveis. \nPasso 2 (Análise por Zonas):\n- Prateleira 1 (Superior): Os produtos (Simple, Olay, Nivea Q10, Tesco Shaving) estão bem abastecidos e alinhados. Não há espaços vazios ou desalinhamentos notáveis. O preenchimento é excelente.\n- Prateleira 2 (Segunda de Cima): No lado esquerdo, há um espaço vazio considerável com um aviso de 'Temporarily out of stock' para as toalhitas faciais Nivea. Esta é a principal anomalia. O resto da prateleira (Garnier, L'Oreal Revitalift, Tesco Shave Gel) está bem abastecido e alinhado.\n- Prateleira 3 (Terceira de Cima): Produtos como Cleansing Lotion, Neutrogena, Simple, Tesco Cotton Buds, Tesco Cleansing Facial Wipes e Nivea Men Face Wash estão bem abastecidos e alinhados. O preenchimento é bom.\n- Prateleira 4 (Quarta de Cima): Produtos Nivea (loções, cremes), Aveeno e E45 estão bem abastecidos e alinhados. Os desodorizantes Sure Men e Lynx também estão bem organizados. O preenchimento é excelente.\n- Prateleira 5 (Quinta de Cima): Produtos Sanex Men, Aussie Miracle Moist, Head & Shoulders e Gillette estão bem abastecidos e alinhados. O preenchimento é excelente.\n- Prateleira 6 (Sexta de Cima): Produtos Nivea Sun, Garnier Ambre Solaire, Piz Buin, Adidas e Dove Men+Care estão bem abastecidos e alinhados. O preenchimento é excelente.\n- Prateleira Inferior/Chão: Produtos Nivea, Garnier Ambre Solaire, Vaseline, Piz Buin, Adidas e Dove Men+Care estão bem abastecidos e alinhados. O preenchimento é bom.\nPasso 3 (Classificação):\n- O status geral é classificado como 'warning' devido à presença de um espaço vazio significativo e claramente sinalizado como 'out of stock' na Prateleira 2. Embora a maioria das outras prateleiras esteja em excelente estado, esta lacuna é proeminente e afeta a disponibilidade do produto.\n- O problema identificado é um 'empty_shelf' na prateleira 2, secção esquerda. A severidade é 'high' devido ao tamanho do espaço vazio e à indicação explícita de falta de stock. A área afetada representa aproximadamente 20% do comprimento da prateleira, resultando numa taxa de preenchimento de cerca de 80% para essa prateleira específica. A confiança na deteção é alta, pois o problema é óbvio e marcado."
+            }
+        },
+        {
+            "image": "exemplo8(v).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_034002",
+                "timestamp": "2026-06-11T03:40:02Z",
+                "image_path": "data\\images\\test_images\\exemplo8(v).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "ok",
+                "issues": [],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem apresenta um corredor de loja de retalho com múltiplas prateleiras, predominantemente preenchidas com produtos de higiene pessoal, como géis de banho, sabonetes em barra e loções. Consegui identificar claramente 14 prateleiras distintas, desde o topo até à base, com algumas áreas ligeiramente cortadas nas extremidades. A iluminação é adequada e a visibilidade dos produtos é boa. A impressão geral é de um corredor bem abastecido e organizado.\n\nPasso 2 (Análise por Zonas):\n- Prateleira 1 (Topo): Contém principalmente géis de banho. Parece estar completamente cheia e organizada. Há um aviso 'Ask for assistance with items on the top shelf'.\n- Prateleira 2: Exibe géis de banho das marcas Tone e Ivory. Todos os produtos estão alinhados e as prateleiras parecem cheias.\n- Prateleira 3: Continua com géis de banho Ivory, St. Ives e Body. Não há espaços vazios visíveis ou produtos desalinhados.\n- Prateleira 4: Apresenta géis de banho Dial, Equate e Caress. A prateleira está bem preenchida e os produtos estão em ordem.\n- Prateleira 5: Contém géis de banho Softsoap em várias cores. A organização é boa e não há falhas no stock.\n- Prateleira 6: Mais géis de banho Softsoap e Aveeno. A prateleira está cheia e os produtos estão virados para a frente.\n- Prateleira 7: Géis de banho Aveeno, Equate e Caress. Sem espaços vazios ou desorganização.\n- Prateleira 8: Géis de banho Caress e Dial. A prateleira está bem abastecida e os produtos estão alinhados.\n- Prateleira 9: Géis de banho Tone e Caress. Tudo parece estar em ordem e com stock completo.\n- Prateleira 10: Sabonetes em barra Ivory, Lever e Caress. As caixas estão bem empilhadas e a prateleira está cheia.\n- Prateleira 11: Sabonetes em barra Ivory, Lever e Caress. Sem problemas de stock ou alinhamento.\n- Prateleira 12: Sabonetes em barra Tone e Dial. As caixas estão organizadas e a prateleira está cheia.\n- Prateleira 13: Sabonetes em barra Dial em diferentes variedades. A prateleira está completamente abastecida e organizada.\n- Prateleira 14 (Base): Sabonetes em barra Dial e Olay, empilhados. A prateleira está cheia e os produtos estão bem dispostos.\n\nNão foram observados espaços vazios significativos, produtos caídos, danificados ou desalinhados em nenhuma das prateleiras. Todos os produtos parecem estar virados para a frente, facilitando a identificação.\n\nPasso 3 (Classificação):\n- Severidade dos Problemas: Baixa. Não foram identificados problemas que exijam intervenção imediata ou que afetem a experiência do cliente.\n- Nível de Preenchimento (Fill Rate): Muito alto, estimado em aproximadamente 98-100% em todas as prateleiras visíveis. O stock está excecionalmente bem gerido.\n- Conclusão: O estado geral do corredor é 'ok', indicando uma excelente manutenção e gestão de inventário. Não há problemas específicos a reportar."
+            }
+        },
+        {
+            "image": "exemplo9(vio).jpg",
+            "parsed_successfully": true,
+            "hallucination_detected": false,
+            "system_output": {
+                "inspection_id": "INS_20260611_034002",
+                "timestamp": "2026-06-11T03:40:02Z",
+                "image_path": "data\\images\\test_images\\exemplo9(vio).jpg",
+                "zone_id": "EVAL_ZONE",
+                "overall_status": "warning",
+                "issues": [
+                    {
+                        "issue_id": "ISS_001",
+                        "type": "misaligned",
+                        "location": "Prateleiras 1, 2 e 3 (principalmente garrafas Галичина)",
+                        "severity": "low",
+                        "description": "Várias garrafas de iogurte Галичина nas prateleiras superiores estão ligeiramente desalinhadas ou inclinadas, não apresentando uma frente perfeita. Este é um problema estético menor.",
+                        "confidence": 0.9,
+                        "affected area pct": 30.0,
+                        "shelf fill rate": 98.0,
+                        "products_detected": [
+                            "iogurte"
+                        ]
+                    },
+                    {
+                        "issue_id": "ISS_002",
+                        "type": "misaligned",
+                        "location": "Prateleira 4 (garrafas pequenas Галичина)",
+                        "severity": "medium",
+                        "description": "Na prateleira inferior, várias garrafas de iogurte Галичина de formato menor estão deitadas horizontalmente sobre as que estão em pé, criando desorganização e dificultando a visualização e acesso aos produtos.",
+                        "confidence": 0.9,
+                        "affected area pct": 20.0,
+                        "shelf fill rate": 90.0,
+                        "products_detected": [
+                            "iogurte"
+                        ]
+                    }
+                ],
+                "model_reasoning": "Passo 1 (Varrimento Global): A imagem apresenta uma secção de um supermercado dedicada a produtos lácteos, especificamente iogurtes engarrafados. É possível identificar claramente quatro prateleiras distintas, repletas de produtos. As três prateleiras superiores contêm garrafas de iogurte de maior dimensão, enquanto a prateleira inferior exibe garrafas mais pequenas, dispostas em várias camadas. Há também etiquetas de preço visíveis em todas as prateleiras.\n\nPasso 2 (Análise por Zonas):\n*   Prateleira 1 (Superior): No lado esquerdo, há várias garrafas vermelhas da marca Yudo, que parecem estar bem abastecidas, embora algumas estejam ligeiramente inclinadas. Na secção central e direita, predominam as garrafas brancas e azuis da marca Галичина (Halychyna) com diversos sabores (cereais, damasco, mirtilo, morango, etc.). Esta secção está muito bem abastecida, com poucas ou nenhumas lacunas visíveis. Algumas garrafas estão um pouco desalinhadas, mas a maioria está em pé. Não foram observados espaços vazios significativos ou produtos caídos.\n*   Prateleira 2 (Média): O lado esquerdo continua com garrafas vermelhas da marca Yudo, igualmente bem abastecidas. A secção central e direita é dominada por garrafas Галичина, com uma variedade de sabores (morango, framboesa, mirtilo, cereais, sementes de linhaça, sem açúcar). O abastecimento é excelente. Existem várias etiquetas de preço penduradas, algumas indicando 'ЗНИЖКИ' (descontos). Tal como na prateleira superior, algumas garrafas estão ligeiramente desalinhadas ou inclinadas, mas não há produtos caídos ou grandes espaços vazios.\n*   Prateleira 3 (Terceira de Cima): Esta prateleira segue um padrão semelhante às duas anteriores, com garrafas Yudo à esquerda e uma vasta gama de iogurtes Галичина (morango, framboesa, mirtilo, cereais, sementes de linhaça, sem açúcar, damasco, frutos silvestres) no centro e à direita. O nível de preenchimento é muito alto. Observam-se pequenas irregularidades no alinhamento das garrafas, mas sem problemas graves como produtos caídos ou grandes vazios.\n*   Prateleira 4 (Inferior): Esta prateleira contém garrafas mais pequenas da marca Галичина. Embora a prateleira esteja cheia de produtos, há uma desorganização notável. Várias garrafas estão deitadas horizontalmente sobre as que estão em pé, especialmente na secção central e direita. Não há espaços vazios, mas a apresentação dos produtos está comprometida devido a esta desorganização.\n\nPasso 3 (Classificação):\n*   Prateleiras 1, 2 e 3: A severidade dos problemas é classificada como 'low'. O principal problema é o desalinhamento menor de algumas garrafas, que não afeta significativamente a disponibilidade ou a visibilidade do produto. O nível de preenchimento (fill rate) é 'high', estimado em cerca de 98-100%, indicando um excelente stock.\n*   Prateleira 4: A severidade do problema é classificada como 'medium'. Embora a prateleira esteja cheia, a presença de várias garrafas deitadas horizontalmente sobre outras cria uma desorganização que pode dificultar a escolha do cliente e a reposição. O nível de preenchimento (fill rate) é 'high', estimado em cerca de 90-95%, mas a desorganização é o fator predominante.\n*   Estado Geral (overall_status): Considerando o bom nível de preenchimento em todas as prateleiras, mas também a desorganização notável na prateleira inferior, o estado geral é classificado como 'warning'. Não é 'critical' porque não há grandes vazios ou produtos danificados, mas a desorganização na prateleira inferior requer atenção."
+            }
+        }
+    ]
+}
